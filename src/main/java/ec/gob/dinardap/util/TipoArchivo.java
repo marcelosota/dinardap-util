@@ -32,6 +32,21 @@ public class TipoArchivo {
 		case "rar":
 			tipo = "application/x-rar-compressed";
 			break;
+		case "tar":
+			tipo = "application/x-tar";
+			break;
+		case "7z":
+			tipo = "application/x-7z-compressed";
+			break;
+		case "csv":
+            tipo = "text/csv";
+            break;
+		case "odt":
+			tipo = "application/vnd.oasis.opendocument.text";
+			break;
+		case "ods":
+			tipo = "application/vnd.oasis.opendocument.spreadsheet";
+			break;
 		}
 		return tipo;
 	}
