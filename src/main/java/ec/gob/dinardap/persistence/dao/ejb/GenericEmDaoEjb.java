@@ -303,8 +303,10 @@ public abstract class GenericEmDaoEjb<T, PK extends Serializable> implements
 		String inner = (innerJoinObject != null) ? ("inner join obj."
 				+ innerJoinObject + " " + innerJoinObject) : "";
 
+		//StringBuffer hql = new StringBuffer("select obj from " + type.getName()
+		//		+ " obj " + inner + " where (");
 		StringBuffer hql = new StringBuffer("select obj from " + type.getName()
-				+ " obj " + inner + " where (");
+		+ " obj " + inner + " ");
 
 		GenericDaoUtil.buildQueryCriteria(hql, parameters, criteriasOr,
 				typesOr, valuesCriteriaOr, criteriasAnd, typesAnd,
@@ -351,8 +353,10 @@ public abstract class GenericEmDaoEjb<T, PK extends Serializable> implements
 		String inner = (innerJoinObject != null) ? ("inner join obj."
 				+ innerJoinObject + " " + innerJoinObject) : "";
 
+		//StringBuffer hql = new StringBuffer("select count(*) from "
+		//		+ type.getName() + " obj " + inner + " where (");
 		StringBuffer hql = new StringBuffer("select count(*) from "
-				+ type.getName() + " obj " + inner + " where (");
+				+ type.getName() + " obj " + inner + " ");
 
 		GenericDaoUtil.buildQueryCriteria(hql, parameters, criteriasOr,
 				typesOr, valuesCriteriaOr, criteriasAnd, typesAnd,

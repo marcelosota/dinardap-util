@@ -208,8 +208,10 @@ public abstract class GenericDaoHibernate<T, PK extends Serializable> extends
 		String inner = (innerJoinObject != null) ? ("inner join obj."
 				+ innerJoinObject + " " + innerJoinObject) : "";
 
+		//StringBuffer hql = new StringBuffer("select obj from " + type.getName()
+		//		+ " obj " + inner + " where (");
 		StringBuffer hql = new StringBuffer("select obj from " + type.getName()
-				+ " obj " + inner + " where (");
+		+ " obj " + inner + " ");
 
 		GenericDaoUtil.buildQueryCriteria(hql, parameters, criteriasOr,
 				typesOr, valuesCriteriaOr, criteriasAnd, typesAnd,
@@ -249,8 +251,10 @@ public abstract class GenericDaoHibernate<T, PK extends Serializable> extends
 		String inner = (innerJoinObject != null) ? ("inner join obj."
 				+ innerJoinObject + " " + innerJoinObject) : "";
 
-		StringBuffer hql = new StringBuffer("select count(obj) from "
-				+ type.getName() + " obj " + inner + " where (");
+		//StringBuffer hql = new StringBuffer("select count(obj) from "
+		//		+ type.getName() + " obj " + inner + " where (");
+		StringBuffer hql = new StringBuffer("select obj from " + type.getName()
+		+ " obj " + inner + " ");
 
 		GenericDaoUtil.buildQueryCriteria(hql, parameters, criteriasOr,
 				typesOr, valuesCriteriaOr, criteriasAnd, typesAnd,
